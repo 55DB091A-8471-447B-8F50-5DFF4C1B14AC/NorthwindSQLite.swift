@@ -31,7 +31,8 @@
       "hashable"      : true,
       "relationships" : true,
     },
-    "Lighter": {
+    "Lighter": "none",
+    "_Lighter": {
       "import"                  : "reexport",
       "relationships"           : true,
       "useSQLiteValueTypeBinds" : false
