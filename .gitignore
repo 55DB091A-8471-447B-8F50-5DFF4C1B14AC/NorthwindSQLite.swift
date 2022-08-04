@@ -2,4 +2,5 @@
 .build
 update.sql
 Package.resolved
+.swiftpm
 
