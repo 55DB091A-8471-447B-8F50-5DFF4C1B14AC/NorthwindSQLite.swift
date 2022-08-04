@@ -11,7 +11,8 @@
   },
   
   "SwiftMapping": {
-    "databaseTypeName": "Northwind"
+    "databaseTypeName": "Northwind",
+    "singularizeRecordNames": true
   },
   
   "CodeGeneration": {
@@ -31,8 +32,7 @@
       "hashable"      : true,
       "relationships" : true,
     },
-    "Lighter": "none",
-    "_Lighter": {
+    "Lighter": {
       "import"                  : "reexport",
       "relationships"           : true,
       "useSQLiteValueTypeBinds" : false
