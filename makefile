@@ -11,6 +11,7 @@ clean:
 	mkdir ./dist
 
 build: clean
+	touch dist/MarkAsSwift.swift
 	sqlite3 dist/northwind.db < src/create.sql > /dev/null
 	sqlite3 dist/northwind.db < src/update.sql > /dev/null
 	sqlite3 dist/northwind.db < src/report.sql
