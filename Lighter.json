@@ -1,0 +1,40 @@
+{
+  "__doc__": "Configuration used for the manual, builtin codegen.",
+  
+  "databaseExtensions" : [ "sqlite3", "db", "sqlite" ],
+  "sqlExtensions"      : [ "sql" ],
+  
+  "CodeStyle": {
+    "functionCommentStyle" : "**",
+    "indent"               : "  ",
+    "lineLength"           : 80
+  },
+  
+  "SwiftMapping": {
+    "databaseTypeName": "Northwind"
+  },
+  
+  "CodeGeneration": {
+    "readOnly"                       : false,
+    "generateAsyncFunctions"         : true,
+    "inlinable"                      : true,
+    "public"                         : true,
+    "allowFoundation"                : true,
+    "swiftFilters"                   : true,
+    "showViewHintComment"            : false,
+    "commentsWithSQL"                : true,
+    "extraRecordTypeConformances"    : [ "Codable" ],
+    "embedRecordTypesInDatabaseType" : false,
+    "optionalHelpersInDatabase"      : true,
+    "Raw": {
+      "prefix"        : "sqlite3_",
+      "hashable"      : true,
+      "relationships" : true,
+    },
+    "Lighter": {
+      "import"                  : "reexport",
+      "relationships"           : true,
+      "useSQLiteValueTypeBinds" : false
+    }
+  }
+}
