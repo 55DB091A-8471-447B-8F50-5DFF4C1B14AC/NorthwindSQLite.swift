@@ -27,6 +27,7 @@ BASEPATH="/NorthwindSQLite.swift/"
 OUTPUT_PATH="$(PWD)/docs"
 
 docs:
+	rm -rf docs
 	swift package \
 	  --allow-writing-to-directory "$(OUTPUT_PATH)" \
 	  generate-documentation \
@@ -35,7 +36,7 @@ docs:
 	  --transform-for-static-hosting \
 	  --hosting-base-path "$(BASEPATH)" \
 	  --output-path "$(OUTPUT_PATH)"
-	cp docs-index.html docs/
+	cp docs-index.html docs/index.html
 
 # http://localhost:8000/documentation/Northwind
 preview:
