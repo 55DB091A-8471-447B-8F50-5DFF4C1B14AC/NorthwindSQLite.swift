@@ -12,7 +12,11 @@
   
   "SwiftMapping": {
     "databaseTypeName": "Northwind",
-    "singularizeRecordNames": true
+    "recordTypeNames": {
+      "singularize" : true,
+      "capitalize"  : true,
+      "camelCase"   : true
+    }
   },
   
   "CodeGeneration": {
