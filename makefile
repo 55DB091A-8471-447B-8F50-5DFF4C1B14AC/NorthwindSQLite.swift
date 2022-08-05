@@ -35,6 +35,7 @@ docs:
 	  --transform-for-static-hosting \
 	  --hosting-base-path "$(BASEPATH)" \
 	  --output-path "$(OUTPUT_PATH)"
+	cp docs-index.html docs/
 
 # http://localhost:8000/documentation/Northwind
 preview:
