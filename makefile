@@ -1,4 +1,4 @@
-.PHONY: clean build run
+.PHONY: clean build run docs
 .DEFAULT_GOAL := build
 
 
@@ -22,3 +22,21 @@ populate:
 
 report:
 	sqlite3 dist/northwind.db < src/report.sql
+
+BASEPATH="/NorthwindSQLite.swift/"
+OUTPUT_PATH="$(PWD)/docs"
+
+docs:
+	swift package \
+	  --allow-writing-to-directory "$(OUTPUT_PATH)" \
+	  generate-documentation \
+	  --target Northwind \
+	  --disable-indexing \
+	  --transform-for-static-hosting \
+	  --hosting-base-path "$(BASEPATH)" \
+	  --output-path "$(OUTPUT_PATH)"
+
+# http://localhost:8000/documentation/Northwind
+preview:
+	swift package --disable-sandbox \
+		preview-documentation --target Northwind
