@@ -1,1 +1,6 @@
 .DS_Store
+.build
+update.sql
+Package.resolved
+.swiftpm
+

@@ -1,4 +1,9 @@
-# Northwind-SQLite3
+# Northwind-SQLite3.swift
+
+2022-08-04: A fork of Northwind-SQLite3 which packages Northwind as a Swift
+            module.
+
+<hr />
 
 This is a version of the Microsoft Access 2000 Northwind sample database, re-engineered for SQLite3.
 
