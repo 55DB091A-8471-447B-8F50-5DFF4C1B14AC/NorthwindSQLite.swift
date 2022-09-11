@@ -1,5 +1,8 @@
 # Northwind-SQLite3.swift
 
+A fork of Northwind-SQLite3 which packages the Northwind
+database as a Swift module/package.
+
 Swift package documentation: 
 [NorthwindSQLite.swift](https://lighter-swift.github.io/NorthwindSQLite.swift/documentation/northwind/).
 
@@ -18,9 +21,36 @@ It works fine in regular SPM contexts.
 - [NorthwindSwiftUI](https://github.com/Lighter-swift/Examples/blob/develop/Sources/NorthwindSwiftUI/) (A SwiftUI example that lets
   one browse the Northwind database. Uses the Lighter API in combination with
   its async/await supports.)
+  
+### Package.swift
 
-2022-08-04: A fork of Northwind-SQLite3 which packages Northwind as a Swift
-            module.
+Example of a "LocalHelper" `Package.swift` that imports Northwind
+for Xcode use:
+```swift
+// swift-tools-version: 5.7
+import PackageDescription
+
+let package = Package(
+    name: "LocalHelper",
+    platforms: [ .macOS(.v10_15), .iOS(.v13) ], // <= required
+    products: [
+        .library(
+            name: "LocalHelper",
+            targets: ["LocalHelper"]),
+    ],
+    dependencies: [
+      .package(url: "https://github.com/Lighter-swift/NorthwindSQLite.swift.git",
+               branch: "develop")
+    ],
+    targets: [
+        .target(
+            name: "LocalHelper",
+            dependencies: [
+              .product(name: "Northwind", package: "NorthwindSQLite.swift")
+            ])
+    ]
+)
+```
 
 <hr />
 
