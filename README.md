@@ -1,5 +1,24 @@
 # Northwind-SQLite3.swift
 
+Swift package documentation: 
+[NorthwindSQLite.swift](https://lighter-swift.github.io/NorthwindSQLite.swift/documentation/northwind/).
+
+**Note**: 
+Due to an Xcode 14 bug the Northwind module cannot yet be directly added to an 
+Xcode project as a package dependency.
+A ["Local Package"](https://developer.apple.com/documentation/xcode/organizing-your-code-with-local-packages)
+needs to be setup.
+It works fine in regular SPM contexts.
+
+### Examples
+
+- [NorthwindWebAPI](https://github.com/Lighter-swift/Examples/blob/develop/Sources/NorthwindWebAPI/) (A server side Swift example
+  exposing the DB as a JSON API endpoint, and providing a few pretty HTML
+  pages showing data contained.)
+- [NorthwindSwiftUI](https://github.com/Lighter-swift/Examples/blob/develop/Sources/NorthwindSwiftUI/) (A SwiftUI example that lets
+  one browse the Northwind database. Uses the Lighter API in combination with
+  its async/await supports.)
+
 2022-08-04: A fork of Northwind-SQLite3 which packages Northwind as a Swift
             module.
 
