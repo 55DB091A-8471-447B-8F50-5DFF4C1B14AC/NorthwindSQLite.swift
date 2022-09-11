@@ -52,6 +52,12 @@ let package = Package(
 )
 ```
 
+To just re-export Northwind, use this in the LocalHelper.swift:
+```swift
+@_exported import Northwind
+```
+
+
 <hr />
 
 This is a version of the Microsoft Access 2000 Northwind sample database, re-engineered for SQLite3.
