@@ -70,7 +70,7 @@ All the TABLES and VIEWS from the MSSQL-2000 version have been converted to Sqli
 
 # Structure
 
-![alt tag](https://raw.githubusercontent.com/jpwhite3/northwind-SQLite3/master/images/Northwind_ERD.png)
+![alt tag](images/Northwind_ERD.png)
 
 # Build Instructions
 
