@@ -7,7 +7,7 @@ Swift package documentation:
 [NorthwindSQLite.swift](https://lighter-swift.github.io/NorthwindSQLite.swift/documentation/northwind/).
 
 **Note**: 
-Due to an Xcode 14 bug the Northwind module cannot yet be directly added to an 
+Due to an Xcode 14/15 bug the Northwind module cannot yet be directly added to an 
 Xcode project as a package dependency.
 A ["Local Package"](https://developer.apple.com/documentation/xcode/organizing-your-code-with-local-packages)
 needs to be setup.
@@ -23,6 +23,14 @@ It works fine in regular SPM contexts.
   its async/await supports.)
   
 ### Package.swift
+
+Steps to workaround Xcode 15beta issues:
+- in your Xcode project, select the project in the sidebar
+- in the Xcode menu, use the "File" / "New Package …" menu
+- select the "Library" template
+- in the next dialog use "Add to project" (it defaults to none), and add it to the Xcode projec
+- make sure to link the helper package to the target (e.g. via "Frameworks, Libs and Embedded Content")
+This is generally a good way to maintain dependencies in Xcode.
 
 Example of a "LocalHelper" `Package.swift` that imports Northwind
 for Xcode use:
