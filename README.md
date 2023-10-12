@@ -1,10 +1,13 @@
-# Northwind-SQLite3.swift
+<h2>Northwind-SQLite3.swift
+  <img src="https://zeezide.com/img/lighter/Lighter256.png"
+       align="right" width="64" height="64" />
+</h2>
 
 A fork of Northwind-SQLite3 which packages the Northwind
 database as a Swift module/package.
 
 Swift package documentation: 
-[NorthwindSQLite.swift](https://lighter-swift.github.io/NorthwindSQLite.swift/documentation/northwind/).
+[NorthwindSQLite.swift](https://northwind-swift.github.io/NorthwindSQLite.swift/documentation/northwind/).
 
 **Note**: 
 Due to an Xcode 14/15 bug the Northwind module cannot yet be directly added to an 
@@ -47,7 +50,7 @@ let package = Package(
             targets: ["LocalHelper"]),
     ],
     dependencies: [
-      .package(url: "https://github.com/Lighter-swift/NorthwindSQLite.swift.git",
+      .package(url: "https://github.com/Northwind-swift/NorthwindSQLite.swift.git",
                branch: "develop")
     ],
     targets: [
