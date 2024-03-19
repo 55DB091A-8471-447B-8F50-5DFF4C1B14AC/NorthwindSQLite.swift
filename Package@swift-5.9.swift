@@ -12,7 +12,7 @@ var package = Package(
   
   dependencies: [
     .package(url: "https://github.com/Lighter-swift/Lighter.git",
-             from: "1.0.28"),
+             from: "1.0.32"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0")
   ],
   
