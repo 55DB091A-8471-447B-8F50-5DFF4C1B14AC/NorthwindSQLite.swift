@@ -20,8 +20,7 @@ var package = Package(
   
   dependencies: [
     .package(url: "https://github.com/Lighter-swift/Lighter.git",
-             //from: "1.2.2"),
-             branch: "chore/strict-concurrency-1"),
+             from: "1.2.4"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0")
   ],
   
