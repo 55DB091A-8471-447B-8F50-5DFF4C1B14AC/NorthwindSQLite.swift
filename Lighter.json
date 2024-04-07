@@ -28,7 +28,7 @@
     "swiftFilters"                   : true,
     "showViewHintComment"            : false,
     "commentsWithSQL"                : true,
-    "extraRecordTypeConformances"    : [ "Codable" ],
+    "extraRecordTypeConformances"    : [ "Codable", "Sendable" ],
     "embedRecordTypesInDatabaseType" : false,
     "optionalHelpersInDatabase"      : true,
     "Raw": {
