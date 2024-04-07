@@ -2,6 +2,12 @@
 
 import PackageDescription
 
+#if swift(>=5.10)
+let settings = [ SwiftSetting.enableExperimentalFeature("StrictConcurrency") ]
+#else
+let settings = [ SwiftSetting ]()
+#endif
+
 var package = Package(
   name: "Northwind",
 
@@ -14,15 +20,17 @@ var package = Package(
   
   dependencies: [
     .package(url: "https://github.com/Lighter-swift/Lighter.git",
-             from: "1.0.32"),
+             //from: "1.2.2"),
+             branch: "chore/strict-concurrency-1"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0")
   ],
   
   targets: [
-    .target(name         : "Northwind",
-            dependencies : [ "Lighter" ],
-            path         : "dist",
-            resources    : [ .copy("northwind.db") ],
-            plugins      : [ .plugin(name: "Enlighter", package: "Lighter") ])
+    .target(name          : "Northwind",
+            dependencies  : [ "Lighter" ],
+            path          : "dist",
+            resources     : [ .copy("northwind.db") ],
+            swiftSettings : settings,
+            plugins       : [ .plugin(name: "Enlighter", package: "Lighter") ])
   ]
 )
